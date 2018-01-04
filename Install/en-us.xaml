@@ -1,0 +1,30 @@
+﻿<Page x:Class="Install.en_us"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+	Title="en_ca">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.ColumnSpan="2">
+            <TextBlock TextWrapping="Wrap" FontSize="14">
+            Enter the product key, which is in your CD case, below, then click &lt;Install&gt; to begin installing SEB on this system for American English.
+            </TextBlock>
+            <TextBox x:Name="key" Margin="5" MaxLength="8" TextAlignment="Center" TextChanged="key_TextChanged" FontWeight="Bold"/>
+            <ProgressBar Height="15" Margin="5" Maximum="5" x:Name="progress"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+            <Button Margin="5,0" Width="100" Click="Button_Click">Back</Button>
+            <Button x:Name="go" Margin="5,0" Width="100" Click="Button_Click_1" IsEnabled="False" IsDefault="True">Install</Button>
+        </StackPanel>
+    </Grid>
+</Page>
