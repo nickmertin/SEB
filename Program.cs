@@ -15,7 +15,7 @@ namespace SEB
     {
         static void Main(string[] args)
         {
-            string[] text = File.ReadAllText(Environment.GetEnvironmentVariable("programdata") + @"\SEB\Locale.dat", Encoding.Unicode).Split('|');
+            string[] text = "en-CA|Seb is ready.|Say a command:| .,:;!?|on|of|done|help|Openning the user manual.|find|information|Searching the web for |Sorry, didn't get that.|An error occured: |Exiting|Found {0} results.|Page |Result {0} is {1} from {2}.|next|previous|result|Invalid result number|Result |open|Openning page in web browser...|snippet".Split('|');
             SpeechSynthesizer so = new SpeechSynthesizer();
             SpeechRecognitionEngine si = new SpeechRecognitionEngine(new CultureInfo(text[0]));
             so.SetOutputToDefaultAudioDevice();
